@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spending the City · NYC Eating Out vs Shopping</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main class="page">
+    <!-- TITLE BLOCK -->
+    <header class="title-block">
+      <div class="emoji">🍽️</div>
+      <p class="kicker">SPENDING THE CITY · NYC</p>
+      <h1>How New Yorkers spend more on eating out than on shopping</h1>
+      <p class="subtitle">
+        Scrolling story · data + everyday habits
+      </p>
+    </header>
+
+    <!-- INTRO COPY -->
+    <section class="section intro">
+      <h2>What I wanted to understand</h2>
+      <p>
+        I live in New York City, where it sometimes feels like people spend more
+        on eating out than on actual products. I wanted to see if that feeling
+        connects to how the city is built and how people live in it.
+      </p>
+      <p>
+        Instead of just guessing, I looked at three simple pieces of city data:
+      </p>
+      <ul>
+        <li><strong>Income level:</strong> how higher income changes spending.</li>
+        <li><strong>Restaurant density:</strong> how many places to eat are around.</li>
+        <li><strong>Apartment size:</strong> how much space people have for stuff.</li>
+      </ul>
+
+      <h2>Hypothesis</h2>
+      <p class="hypothesis">
+        People in New York City spend more money on eating out than on shopping
+        because they earn more, have restaurants everywhere, and live in small
+        apartments with limited storage.
+      </p>
+
+      <p class="scroll-hint">Scroll to start ↓</p>
+    </section>
+
+    <!-- SECTION 1 · INCOME -->
+    <section class="section">
+      <h2>1 · Income: when money makes convenience normal</h2>
+      <p>
+        New Yorkers in higher income brackets often work long hours and have
+        less time to cook. When money and time don’t match, people buy
+        convenience—quick meals, takeout, and coffee—rather than spending that
+        same money on more products.
+      </p>
+
+      <h3>What I plotted</h3>
+      <p>
+        Below is a simple breakdown of <strong>estimated yearly spending</strong>
+        on eating out vs shopping for three income groups. The exact numbers are
+        rounded and simplified, but they follow the pattern seen in national
+        spending surveys: as income goes up, money for eating out grows faster
+        than money for products.
+      </p>
+
+      <div class="chart-frame">
+        <h4>Eating out vs shopping by income group</h4>
+        <canvas id="incomeChart"></canvas>
+        <p class="chart-caption">
+          Each group shows example yearly spending per household. Higher income
+          households put more of their budget into eating out than into buying
+          products.
+        </p>
+      </div>
+
+      <h3>What this suggests for NYC</h3>
+      <p>
+        In a high-income city like NYC, there are many people in the “middle”
+        and “high” income ranges. For them, paying for prepared food becomes a
+        normal daily choice, not a rare treat. Eating out starts to feel like
+        the default, while shopping stays flatter.
+      </p>
+    </section>
+
+    <!-- SECTION 2 · RESTAURANT DENSITY -->
+    <section class="section">
+      <h2>2 · Restaurant density: when food is always a few steps away</h2>
+      <p>
+        NYC is full of places to eat—restaurants, delis, bodegas, and fast
+        casual spots. When food is always close by, the easiest option is to
+        grab something outside, not to go home, cook, or spend time browsing
+        stores for products.
+      </p>
+
+      <h3>What I plotted</h3>
+      <p>
+        Here, each dot is a city. The
+        <strong>x-axis</strong> shows restaurants per 10,000 residents. The
+        <strong>y-axis</strong> is a simple index of eating-out spending
+        (100 = U.S. average). These values are rounded and illustrative, but
+        they mirror lists that show NYC and other dense cities near the top for
+        restaurant counts.
+      </p>
+
+      <div class="chart-frame">
+        <h4>More restaurants nearby → more money spent on eating out</h4>
+        <canvas id="densityChart"></canvas>
+        <p class="chart-caption">
+          Cities with more restaurants per person tend to sit higher on the
+          eating-out index. NYC appears in the top-right area: lots of
+          restaurants, lots of spending on eating out.
+        </p>
+      </div>
+
+      <h3>What this suggests for NYC</h3>
+      <p>
+        In New York, you rarely have to plan ahead to find food. Convenience is
+        built into the streets. When restaurants are everywhere, the city
+        quietly encourages people to spend money on meals instead of taking the
+        time to shop and cook at home.
+      </p>
+    </section>
+
+    <!-- SECTION 3 · SMALL SPACES -->
+    <section class="section">
+      <h2>3 · Small apartments: less room for stuff, more room for going out</h2>
+      <p>
+        Compared to the U.S. average, NYC apartments are small. With less
+        storage, people simply can’t keep as many clothes, decor pieces, or
+        random products. Owning less becomes a practical decision, not just an
+        aesthetic one.
+      </p>
+
+      <h3>What I plotted</h3>
+      <p>
+        This chart compares rounded averages of <strong>apartment size in
+        square feet</strong> for several cities and the U.S. overall. New York
+        sits below the national average, while some cities, like Dallas, are
+        noticeably larger.
+      </p>
+
+      <div class="chart-frame">
+        <h4>Average apartment size: NYC vs other cities</h4>
+        <canvas id="spaceChart"></canvas>
+        <p class="chart-caption">
+          NYC rentals are smaller than the U.S. average and smaller than some
+          other big-city units. Less space means less storage for products,
+          which pushes some spending away from “buying stuff” and toward
+          experiences like eating out.
+        </p>
+      </div>
+
+      <h3>What this suggests for NYC</h3>
+      <p>
+        When your apartment is small, every new item is a decision. That reality
+        makes it easier to say “no” to more things and “yes” to going out. Food
+        doesn’t need a closet, a drawer, or a shelf—it’s consumed and gone.
+      </p>
+    </section>
+
+    <!-- CONCLUSION -->
+    <section class="section conclusion">
+      <h2>What all three pieces say together</h2>
+      <p>
+        Each part of this story looks at a different side of city life. When
+        you line them up—income, restaurant density, and apartment size—they all
+        point in the same direction.
+      </p>
+
+      <ul>
+        <li><strong>Income:</strong> more money makes it easier to pay for convenience and quick meals.</li>
+        <li><strong>Restaurant density:</strong> many nearby options make eating out the easiest choice.</li>
+        <li><strong>Small spaces:</strong> limited storage makes people more selective about products.</li>
+      </ul>
+
+      <p>
+        Together, these factors support the idea that New Yorkers are nudged
+        toward spending more on eating out than on shopping. It’s not just about
+        personal preference. The city’s money, layout, and housing all push
+        spending toward food and experiences instead of more stuff.
+      </p>
+
+      <p class="closing-line">
+        In a place like New York City, <strong>how you spend is shaped by where
+        you live</strong> as much as by what you like.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>Spending in Big Cities · NYC Focus · Class Data Visualization Project</p>
+      <p>Data values simplified and rounded from public sources for educational use.</p>
+    </footer>
+  </main>
+</body>
+</html>
+
+
+
+
